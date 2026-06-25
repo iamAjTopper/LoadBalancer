@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="LoadBalancer/LoadBalancer.vcxproj" Id="2854d4bc-e6be-4cff-83b4-124753cf63f2" />
+</Solution>
