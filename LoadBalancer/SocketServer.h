@@ -16,6 +16,8 @@ private:
 	sockaddr_in serverAddress;
 public:
 	SocketServer();
+
 	bool intialize();
+	bool createSocket();
 
 };

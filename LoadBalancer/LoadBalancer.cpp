@@ -5,5 +5,9 @@
 int main()
 {
     SocketServer server;
-    server.intialize();
+    if (!server.intialize())
+        return 1;
+
+    if (!server.createSocket())
+        return 1;
 }
