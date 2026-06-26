@@ -1,5 +1,6 @@
 #include"SocketServer.h"
 
+
 SocketServer::SocketServer() {
 	serverSocket = INVALID_SOCKET;
 }
@@ -21,5 +22,21 @@ bool SocketServer::createSocket() {
 		return false;
 	}
 	std::cout << "Socket created successfully\n";
+	return true;
+}
+
+bool SocketServer::bindSocket() {
+	serverAddress.sin_family = AF_INET;
+	serverAddress.sin_port = htons(PORT);
+	if (inet_pton(AF_INET, "127.0.0.1", &serverAddress.sin_addr) != 1)
+	{
+		std::cout << "Invalid IP Address\n";
+		return false;
+	}
+	if (bind(serverSocket, (sockaddr*)&serverAddress, sizeof(serverAddress)) == SOCKET_ERROR) {
+		std::cout << "Bind Failed\n";
+		return false;
+	}
+	std::cout << "Socket Bound Successfullly\n";
 	return true;
 }
