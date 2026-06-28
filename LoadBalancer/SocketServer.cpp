@@ -40,3 +40,24 @@ bool SocketServer::bindSocket() {
 	std::cout << "Socket Bound Successfullly\n";
 	return true;
 }
+
+bool SocketServer::startListening() {
+	if(listen(serverSocket,SOMAXCONN)==SOCKET_ERROR){
+		std::cout << "Listen Failed\n";
+		return false;
+	}
+	std::cout << "Listening for incoming connections...\n";
+	return true;
+}
+
+bool SocketServer::acceptClient() {
+	std::cout<<"Waiting for client connection...\n";
+
+	clientSocket = accept(serverSocket, nullptr, nullptr);
+	if(clientSocket == INVALID_SOCKET){
+		std::cout << "Accept Failed\n";
+		return false;
+	}
+	std::cout << " Client connected successfully\n";
+	return true;
+}

@@ -13,4 +13,12 @@ int main()
     
     if(!server.bindSocket())
         return 1;
+
+    if (!server.startListening())
+        return 1;
+
+    while (true) {
+		server.acceptClient();
+    }
+    return 0;
 }

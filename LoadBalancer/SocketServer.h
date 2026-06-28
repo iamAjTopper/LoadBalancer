@@ -14,6 +14,8 @@ private:
 	WSADATA wsaData;
 	//listening socket for the server
 	SOCKET serverSocket;
+	//socket for the client connection
+	SOCKET clientSocket;
 	//structure to hold the server address information
 	sockaddr_in serverAddress;
 public:
@@ -22,5 +24,7 @@ public:
 	bool intialize();
 	bool createSocket();
 	bool bindSocket();
+	bool startListening();
+	bool acceptClient();
 
 };
