@@ -15,6 +15,8 @@ int main() {
 		return 1;
 	}
 
+	client.sendData("Hello Server");
+
 	system("pause");
 
 	client.cleanup();

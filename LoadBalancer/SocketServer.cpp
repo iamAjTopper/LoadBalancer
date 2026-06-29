@@ -3,6 +3,7 @@
 
 SocketServer::SocketServer() {
 	serverSocket = INVALID_SOCKET;
+	clientSocket = INVALID_SOCKET;
 }
 
 bool SocketServer::intialize() {
@@ -59,5 +60,22 @@ bool SocketServer::acceptClient() {
 		return false;
 	}
 	std::cout << " Client connected successfully\n";
+	return true;
+}
+
+bool SocketServer::receiveData() {
+	char buffer[1024] = { 0 };
+
+	int bytesReceived = recv(clientSocket, buffer, sizeof(buffer), 0);
+	if (bytesReceived == SOCKET_ERROR) {
+		std::cout << "Receive Failed\n";
+		return false;
+	}
+
+	if (bytesReceived == 0) {
+		std::cout << " Client disconnected\n";
+		return false;
+	}
+	std::cout << "Received Data: " << buffer << "\n";
 	return true;
 }

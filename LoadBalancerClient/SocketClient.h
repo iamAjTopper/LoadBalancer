@@ -18,5 +18,7 @@ public:
 	bool createSocket();
 	bool connectToServer();
 
+	bool sendData(const char* message);
+
 	void cleanup();
 };

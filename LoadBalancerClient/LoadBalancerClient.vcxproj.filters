@@ -26,7 +26,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\LoadBalancer\SocketClient.h">
+    <ClInclude Include="SocketClient.h">
       <Filter>Client</Filter>
     </ClInclude>
   </ItemGroup>

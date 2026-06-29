@@ -10,15 +10,17 @@ int main()
 
     if (!server.createSocket())
         return 1;
-    
-    if(!server.bindSocket())
+
+    if (!server.bindSocket())
         return 1;
 
     if (!server.startListening())
         return 1;
 
     while (true) {
-		server.acceptClient();
+        if (server.acceptClient()){
+            server.receiveData();
+        }
     }
     return 0;
 }

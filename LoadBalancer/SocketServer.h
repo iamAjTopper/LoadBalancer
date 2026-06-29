@@ -27,4 +27,9 @@ public:
 	bool startListening();
 	bool acceptClient();
 
+	bool receiveData();
+	bool sendData(const char* message);
+
+	void cleanup();
+
 };

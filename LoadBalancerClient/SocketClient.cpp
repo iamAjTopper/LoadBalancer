@@ -38,6 +38,18 @@ bool SocketClient::connectToServer() {
 	return true;
 }
 
+bool SocketClient::sendData(const char* message) {
+	int bytesSent = send(clientSocket, message, strlen(message), 0);
+	
+	if(bytesSent == SOCKET_ERROR){
+		std::cout << "Send Failed with error: " << WSAGetLastError() << std::endl;
+		return false;
+	}
+
+	std::cout << "Sent " << bytesSent << " bytes to server.\n";
+	return true;
+}
+
 void SocketClient::cleanup() {
 	closesocket(clientSocket);
 	WSACleanup();

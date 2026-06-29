@@ -144,7 +144,7 @@
     <ClCompile Include="SocketClient.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\LoadBalancer\SocketClient.h" />
+    <ClInclude Include="SocketClient.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
