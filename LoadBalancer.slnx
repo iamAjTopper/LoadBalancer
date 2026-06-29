@@ -3,5 +3,7 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="BackendServer/BackendServer.vcxproj" Id="1a88f128-2a33-4e62-87aa-99ac10ab07fb" />
   <Project Path="LoadBalancer/LoadBalancer.vcxproj" Id="2854d4bc-e6be-4cff-83b4-124753cf63f2" />
+  <Project Path="LoadBalancerClient/LoadBalancerClient.vcxproj" Id="39338d9d-b846-4c25-a3d8-52230ce97981" />
 </Solution>

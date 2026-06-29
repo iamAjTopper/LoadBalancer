@@ -13,39 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Network">
-      <UniqueIdentifier>{e3a2000c-eda9-48f4-8162-7ffa8a57ee56}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Server">
-      <UniqueIdentifier>{8bdc4975-ad3f-485c-9b67-9e4329471c52}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ServerManager">
-      <UniqueIdentifier>{edc9af48-2b0e-449d-94ed-ecf7e22e4915}</UniqueIdentifier>
+    <Filter Include="Client">
+      <UniqueIdentifier>{76a4e2ac-a032-4201-b9ea-1759e51f8d14}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LoadBalancer.cpp">
+    <ClCompile Include="LoadBalancerClient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SocketServer.cpp">
-      <Filter>Network</Filter>
-    </ClCompile>
-    <ClCompile Include="Server.cpp">
-      <Filter>Server</Filter>
-    </ClCompile>
-    <ClCompile Include="ServerManager.cpp">
-      <Filter>ServerManager</Filter>
+    <ClCompile Include="SocketClient.cpp">
+      <Filter>Client</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SocketServer.h">
-      <Filter>Network</Filter>
-    </ClInclude>
-    <ClInclude Include="Server.h">
-      <Filter>Server</Filter>
-    </ClInclude>
-    <ClInclude Include="ServerManager.h">
-      <Filter>ServerManager</Filter>
+    <ClInclude Include="..\LoadBalancer\SocketClient.h">
+      <Filter>Client</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
