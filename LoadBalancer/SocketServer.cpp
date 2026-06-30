@@ -79,3 +79,19 @@ bool SocketServer::receiveData() {
 	std::cout << "Received Data: " << buffer << "\n";
 	return true;
 }
+
+bool SocketServer::sendData(const char* message) {
+	int bytesSent = send(clientSocket, message, strlen(message), 0);
+	if (bytesSent == SOCKET_ERROR) {
+		std::cout << "Send Failed\n";
+		return false;
+	}
+
+	std::cout << "Sent " << bytesSent << " bytes to server.\n";
+	return true;
+}
+
+void SocketServer::cleanup() {
+	closesocket(clientSocket);
+	WSACleanup();
+}

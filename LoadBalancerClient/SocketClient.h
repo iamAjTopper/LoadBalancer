@@ -19,6 +19,7 @@ public:
 	bool connectToServer();
 
 	bool sendData(const char* message);
+	bool receiveData();
 
 	void cleanup();
 };

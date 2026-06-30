@@ -16,6 +16,7 @@ int main() {
 	}
 
 	client.sendData("Hello Server");
+	client.receiveData();
 
 	system("pause");
 

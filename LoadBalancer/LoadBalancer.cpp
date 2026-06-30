@@ -19,7 +19,9 @@ int main()
 
     while (true) {
         if (server.acceptClient()){
-            server.receiveData();
+            if(server.receiveData()) {
+                server.sendData("Hello Client");
+            }
         }
     }
     return 0;

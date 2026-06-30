@@ -50,6 +50,26 @@ bool SocketClient::sendData(const char* message) {
 	return true;
 }
 
+bool SocketClient::receiveData() {
+	char buffer[1024] = { 0 };
+
+	int bytesReceived = recv(clientSocket, buffer, sizeof(buffer), 0);
+
+	if (bytesReceived == SOCKET_ERROR) {
+		std::cout << "Receive Failed\n";
+		return false;
+	}
+
+	if (bytesReceived == 0) {
+		std::cout << "Server Disconnected";
+		return false;
+	}
+
+	std::cout << "Server says:" << buffer << "\n";
+
+	return true;
+}
+
 void SocketClient::cleanup() {
 	closesocket(clientSocket);
 	WSACleanup();
