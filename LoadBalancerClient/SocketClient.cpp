@@ -25,7 +25,7 @@ bool SocketClient::createSocket() {
 
 bool SocketClient::connectToServer() {
 	serverAddress.sin_family = AF_INET;
-	serverAddress.sin_port = htons(8080);
+	serverAddress.sin_port = htons(9001);
 
 	inet_pton(AF_INET, "127.0.0.1", &serverAddress.sin_addr);
 
