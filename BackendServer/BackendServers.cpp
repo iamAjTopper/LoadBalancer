@@ -50,7 +50,7 @@ bool BackendServer::startListening() {
 		std::cout << "Listen Failed\n";
 		return false;
 	}
-	std::cout << "Listening on port" << port << "\n";
+	std::cout << "Listening on port " << port << "\n";
 	return true;
 }
 
@@ -103,7 +103,7 @@ bool BackendServer::handleClient()
 	if (!receiveData())
 		return false;
 
-	std::string response = "Hello from " + serverName;
+	std::string response = "Hello from " + serverName + " (Port " + std::to_string(port) + ")";
 
 	if (!sendData(response.c_str()))
 		return false;

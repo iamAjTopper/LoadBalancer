@@ -142,11 +142,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="LoadBalancer.cpp" />
+    <ClCompile Include="LoadBalancers.cpp" />
     <ClCompile Include="Server.cpp" />
     <ClCompile Include="ServerManager.cpp" />
     <ClCompile Include="SocketServer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LoadBalancers.h" />
     <ClInclude Include="Server.h" />
     <ClInclude Include="ServerManager.h" />
     <ClInclude Include="SocketServer.h" />

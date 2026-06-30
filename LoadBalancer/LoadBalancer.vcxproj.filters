@@ -22,6 +22,9 @@
     <Filter Include="ServerManager">
       <UniqueIdentifier>{edc9af48-2b0e-449d-94ed-ecf7e22e4915}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LoadBalancers">
+      <UniqueIdentifier>{3423a9c9-7162-442f-b8e6-3d7ced88e96c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LoadBalancer.cpp">
@@ -36,6 +39,9 @@
     <ClCompile Include="ServerManager.cpp">
       <Filter>ServerManager</Filter>
     </ClCompile>
+    <ClCompile Include="LoadBalancers.cpp">
+      <Filter>LoadBalancers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SocketServer.h">
@@ -46,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="ServerManager.h">
       <Filter>ServerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadBalancers.h">
+      <Filter>LoadBalancers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

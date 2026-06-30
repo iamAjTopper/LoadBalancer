@@ -1,10 +1,12 @@
 #include <iostream>
 #include "ServerManager.h"
 #include"SocketServer.h"
+#include "LoadBalancers.h"
 
 int main()
 {
     SocketServer server;
+    LoadBalancer lb;
     if (!server.intialize())
         return 1;
 
